@@ -1,0 +1,66 @@
+<html>
+<center>
+	 
+
+
+
+<h2><%= link_to "Back to Home", controller: 'home', action: 'index', class: "back-link" %>
+
+<div class="Book Index">
+	<h1><b>Books</b></h1>
+
+	<style>
+		
+
+		table,th,td
+		{
+			border:1px solid black;
+			
+		border-radius: 5px;
+			padding: 10px;
+
+		}
+		th,td
+		{
+			padding: 10px;
+  background-color: hsl(316, 14%, 78%);
+  color: black
+}
+
+	
+		}
+
+	</style>
+<h2><%= link_to "Add new Book", controller: 'book1', action: 'new', class: "action new" %>
+	
+<br>
+<br>
+
+<h2><table class="listing" summary="book List" style="width: 50%">
+	<tr class="header">
+	<th>Name</th>
+	<th>Actions</th>
+	</tr>
+
+
+<% @book1.each do |c| %>
+<tr class="<%= cycle('odd','even')%>">
+	<td><%= c.name %></td>
+
+
+	<td class="action">
+		<%= link_to "show",action:'show', :id =>c.id, class: "action show" %>
+		<%= link_to "Edit",action:'edit', :id =>c.id, class: "action edit" %>
+		<%= link_to "Delete",action:'delete', :id =>c.id, class: "action delete" %>
+	</td>
+
+	
+</tr>	
+<% end %>
+</table>
+</div>
+
+</center>
+
+</html>
+

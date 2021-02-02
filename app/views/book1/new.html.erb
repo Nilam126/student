@@ -1,0 +1,30 @@
+<body style="background-color:hsla(9, 100%, 64%, 0.5);">
+
+<center><div class="Page New">
+	<h2>Create New Record</h2>
+
+    <%= form_for(:book1, url: {controller: "book1", action: 'create' }) do |t| %>
+
+    <table summary="Book form fields">	
+    <tr>
+    	<th> Book Name</th>
+    	<td><%=t.text_field(:name) %></td>
+
+    </tr>
+    <tr>
+    	<th> Book Author</th>
+    	<td><%=t.text_field(:auther) %></td>
+
+    </tr>
+    <tr>
+    	<th>Book Price</th>
+    	<td><%=t.text_field(:price) %></td>
+
+    </tr>
+</table>
+<div class="form-button">
+	<%=submit_tag("Create Book") %>
+</div>
+</div>
+<% end %>
+</center>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Student</title>
+    
+  <% begin %>
+  <%= stylesheet_link_tag 'application', 'data-turbolinks-track' => 'reload', media: 'all' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => 'reload' %>
+<% rescue %>
+  <script>
+    window.location.replace "#{user_session_url()}"
+  </script>
+<% end %>
+
+
+  <body>
+    <style>
+
+body {
+  background-image: url('https://st4.depositphotos.com/4431055/20921/i/1600/depositphotos_209210230-stock-photo-open-book-table-library-background.jpg');
+  background-repeat: no-repeat;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+</style>
+    <%= yield %>
+  </body>
+</html>

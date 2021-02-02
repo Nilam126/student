@@ -1,0 +1,30 @@
+<style>
+
+body {
+  background-image: url('https://images-na.ssl-images-amazon.com/images/I/81kOP0Kut7L.png');
+  background-repeat: no-repeat;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+</style>
+<center>
+<p id='alert'><%= alert %></p>
+<h1>Login</h1>
+<%= form_tag sessions_path do |form| %>
+ <div class='field'>
+   <%= label_tag :email %>
+   <%= text_field_tag :email %>
+ </div>
+ <div class='field'>
+   <%= label_tag :password %>
+   <%= password_field_tag :password %>
+ </div>
+ <div class='actions'>
+   <%= submit_tag 'Login' %>
+
+ </div>
+<% end %>
+
+<%= link_to 'sign up', new_user1_path %>
+</center>

@@ -1,0 +1,33 @@
+<body style="background-color:hsla(9, 100%, 64%, 0.5);">
+
+<center>
+    
+<div class="Book Edit">
+    <h2>Update  Record</h2>
+
+    <%= form_for(:book1,url: {action: 'update', id: @book1.id })do |t| %>
+    <h2><table summary="Book form fields">  
+    <tr>
+        <th> Book Name</th>
+        <td><%=t.text_field(:name) %></td>
+
+    </tr>
+    <tr>
+        <th> Book Author</th>
+        <td><%=t.text_field(:auther) %></td>
+
+    </tr>
+    <tr>
+        <th>Book Price</th>
+        <td><%=t.text_field(:price) %></td>
+
+    </tr></h2>
+</table>
+<h2><div class="form-button">
+    <%=submit_tag("Edit Book") %></h2>
+</div>
+</div>
+<% end %>
+</center>
+
+

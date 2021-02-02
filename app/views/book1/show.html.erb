@@ -1,0 +1,17 @@
+<html>
+<body style="background-color:hsla(9, 100%, 64%, 0.5);">
+
+
+<center><h1><%= @book1.name%></h1>
+<p>
+<H2><strong>Price: </strong>$<%= @book1.price %><br/></H2>
+<h2><strong>Auther </strong> <%= @book1.auther %><br/></h2>
+<h2><strong>Created Date: </strong> <%= @book1.created_at%><br/></h2>
+
+<hr />
+<h2><%= link_to "Back", {:action => 'list'} %></h2>
+</p>
+</center>
+</body>
+</html>
+
